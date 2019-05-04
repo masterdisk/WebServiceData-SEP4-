@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,35 +9,43 @@ namespace WebServiceData.Models
 {
     public class Account
     {
-        private String userName;
-        private String password;
-        private List<PlantProfile> plantProfiles ;
-
-        public Account(String userName, String password)
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id
         {
-            this.userName = userName;
-            this.password = password;
+            get; set;
+        }
+        [BsonRepresentation(BsonType.String)]
+        private string Username;
+        [BsonRepresentation(BsonType.String)]
+        private string Password;
+        [BsonRepresentation(BsonType.Array)]
+        private List<PlantProfile> plantProfiles;
+
+        public Account(string userName, string password)
+        {
+            this.Username = userName;
+            this.Password = password;
             plantProfiles = new List<PlantProfile>();
         }
 
-        public String getUserName()
+        public string getUserName()
         {
-            return userName;
+            return Username;
         }
 
-        public void setUserName(String userName)
+        public void setUserName(string userName)
         {
-            this.userName = userName;
+            this.Username = userName;
         }
 
-        public String getPassword()
+        public string getPassword()
         {
-            return password;
+            return Password;
         }
 
-        public void setPassword(String password)
+        public void setPassword(string password)
         {
-            this.password = password;
+            this.Password = password;
         }
 
         public void addPlantProfile(PlantProfile profile)
@@ -51,21 +61,6 @@ namespace WebServiceData.Models
             }
             return null;
         }
-
-        public PlantProfile getPlantByID(int id )
-        {
-            for (int i = 0; i < plantProfiles.Count; i++)
-            {
-                if(id == plantProfiles[i].getPlantID())
-                    {
-                    return plantProfiles[i];
-                }
-
-            }
-
-            return null;
-        }
-
 
     }
 }

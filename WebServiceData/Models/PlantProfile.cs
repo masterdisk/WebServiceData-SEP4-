@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,51 +9,69 @@ namespace WebServiceData.Models
 {
     public class PlantProfile
     {
-        private  String plantName { get; set; }
-        private int plantID { get; set; }
-        private List<Reading> readings;
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
 
-        public PlantProfile(int plantID, String plantName)
+        [BsonRepresentation(BsonType.Int32)]
+        public int PlantID
         {
-            this.plantID = plantID;
-            this.plantName = plantName;
-            readings = new List<Reading>();
-
+            get; set;
         }
 
-        public String getPlantName()
+        [BsonRepresentation(BsonType.String)]
+        public string PlantName
         {
-            return plantName;
+            get; set;
         }
 
-        public void setPlantName()
+        [BsonRepresentation(BsonType.Double)]
+        public double Temperature
         {
-            this.plantName = plantName;
+            get; set;
         }
 
-        public int getPlantID()
+        [BsonRepresentation(BsonType.Double)]
+        public double CO2
         {
-            return plantID;
+            get; set;
         }
 
-        public void setPlantID()
+        [BsonRepresentation(BsonType.Double)]
+        public double Humidity
         {
-            this.plantID = plantID;
+            get; set;
         }
 
-        public void addReading(Reading reading)
+        [BsonRepresentation(BsonType.Double)]
+        public double AmountOfWater
         {
-            readings.Add(reading);
+            get; set;
         }
 
-        public Reading getAllReadings()
+        [BsonRepresentation(BsonType.Double)]
+        public double HoursSinceWatering
         {
-            for (int i = 0; i < readings.Count; i++)
-            {
-                return readings[i];
-            }
-            return null;
+            get; set;
         }
-        
+
+        [BsonRepresentation(BsonType.DateTime)]
+        public DateTime DateTime
+        {
+            get; set;
+        }
+
+        public PlantProfile(int plantID, string plantName, double temperature, double CO2, double humidity, double amountOfWater, double hoursSinceWatering, DateTime dateTime)
+        {
+            this.PlantID = plantID;
+            this.PlantName = plantName;
+            this.Temperature=temperature;
+            this.CO2 = CO2;
+            this.Humidity = humidity;
+            this.AmountOfWater = amountOfWater;
+            this.HoursSinceWatering = hoursSinceWatering;
+            this.DateTime = dateTime;
+        }
+
+      
     }
 }
