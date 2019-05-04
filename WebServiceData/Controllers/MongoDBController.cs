@@ -23,11 +23,11 @@ namespace WebServiceData.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public async void Post([FromBody]PlantProfile account)
+        public async void Post([FromBody]PlantProfile plants)
         {
-            var monogDbService = new MongoDBMain("AccountsDatabase", "PlantProfiles", "mongodb://ea9d9986e87a086f47cf3eedf97735a3");
+            var monogDbService = new MongoDBMain("Project", "PlantProfiles", @"mongodb+srv://Llamaxy:865feeBA@test-i10mg.mongodb.net/test?retryWrites=true");
 
-            await monogDbService.InsertAccount(account);
+            await monogDbService.InsertPlantsProfile(plants);
         }
 
     }
