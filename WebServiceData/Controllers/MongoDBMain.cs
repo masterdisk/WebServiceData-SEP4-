@@ -20,7 +20,7 @@ namespace WebServiceData.Controllers
             PlantsCollection = mongoDatabase.GetCollection<PlantProfile>(collectionName);
         }
 
-        public async Task InsertAccount(PlantProfile pl) => await PlantsCollection.InsertOneAsync(pl);
+        public async Task InsertPlantsProfile(PlantProfile pl) => await PlantsCollection.InsertOneAsync(pl);
 
         public async Task <List<PlantProfile>> GetAllPlantsProfiles()
         {
