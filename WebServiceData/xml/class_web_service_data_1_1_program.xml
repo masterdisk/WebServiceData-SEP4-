@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_web_service_data_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>WebServiceData::Program</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_web_service_data_1_1_program_1a00b8f9917755c63a3916f1ac84ea2d52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void WebServiceData.Program.Main</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>Main</name>
+        <param>
+          <type>string []</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="15" column="1" bodyfile="Program.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_web_service_data_1_1_program_1ac6046accf3a5313dc4f508171fc82d6e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IWebHostBuilder</type>
+        <definition>static IWebHostBuilder WebServiceData.Program.CreateWebHostBuilder</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>CreateWebHostBuilder</name>
+        <param>
+          <type>string []</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Program.cs" line="20" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Program.cs" line="14" column="1" bodyfile="Program.cs" bodystart="13" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_web_service_data_1_1_program_1ac6046accf3a5313dc4f508171fc82d6e" prot="public" virt="non-virtual"><scope>WebServiceData::Program</scope><name>CreateWebHostBuilder</name></member>
+      <member refid="class_web_service_data_1_1_program_1a00b8f9917755c63a3916f1ac84ea2d52" prot="public" virt="non-virtual"><scope>WebServiceData::Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

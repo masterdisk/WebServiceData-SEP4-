@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_web_service_data_1_1_startup" kind="class" language="C#" prot="public">
+    <compoundname>WebServiceData::Startup</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_web_service_data_1_1_startup_1ad24217aeab2918cdee848046f72d8159" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WebServiceData.Startup.ConfigureServices</definition>
+        <argsstring>(IServiceCollection services)</argsstring>
+        <name>ConfigureServices</name>
+        <param>
+          <type>IServiceCollection</type>
+          <declname>services</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Startup.cs" line="20" column="1" bodyfile="Startup.cs" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_web_service_data_1_1_startup_1a23575bda6796c19fbb16fdc537d902d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WebServiceData.Startup.Configure</definition>
+        <argsstring>(IApplicationBuilder app, IHostingEnvironment env)</argsstring>
+        <name>Configure</name>
+        <param>
+          <type>IApplicationBuilder</type>
+          <declname>app</declname>
+        </param>
+        <param>
+          <type>IHostingEnvironment</type>
+          <declname>env</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Startup.cs" line="27" column="1" bodyfile="Startup.cs" bodystart="27" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Startup.cs" line="17" column="1" bodyfile="Startup.cs" bodystart="16" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_web_service_data_1_1_startup_1a23575bda6796c19fbb16fdc537d902d3" prot="public" virt="non-virtual"><scope>WebServiceData::Startup</scope><name>Configure</name></member>
+      <member refid="class_web_service_data_1_1_startup_1ad24217aeab2918cdee848046f72d8159" prot="public" virt="non-virtual"><scope>WebServiceData::Startup</scope><name>ConfigureServices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
