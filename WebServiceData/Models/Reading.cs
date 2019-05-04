@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,29 +9,34 @@ namespace WebServiceData.Models
 {
     public class Reading
     {
-        private double temperature { get; set; }
+        [BsonRepresentation(BsonType.Double)]
+        private double Temperature { get; set; }
+        [BsonRepresentation(BsonType.Double)]
         private double CO2 { get; set; }
-        private double humidity { get; set; }
-        private double amountOfWater { get; set; }
-        private double hoursSinceWatering { get; set; }
+        [BsonRepresentation(BsonType.Double)]
+        private double Humidity { get; set; }
+        [BsonRepresentation(BsonType.Double)]
+        private double AmountOfWater { get; set; }
+        [BsonRepresentation(BsonType.Double)]
+        private double HoursSinceWatering { get; set; }
 
         public Reading(double temperature, double CO2, double humidity, double amountofWater, double hoursSinceWatering)
         {
-            this.temperature = temperature;
+            this.Temperature = temperature;
             this.CO2 = CO2;
-            this.humidity = humidity;
-            this.amountOfWater = amountOfWater;
-            this.hoursSinceWatering = hoursSinceWatering;
+            this.Humidity = humidity;
+            this.AmountOfWater = AmountOfWater;
+            this.HoursSinceWatering = hoursSinceWatering;
         }
 
         public double getTemperature()
         {
-            return temperature;
+            return Temperature;
         }
 
         public void setTemperature(double temperature)
         {
-            this.temperature = temperature;
+            this.Temperature = temperature;
         }
 
         public double getCO2()
@@ -44,32 +51,32 @@ namespace WebServiceData.Models
 
         public double getHumidity()
         {
-            return humidity;
+            return Humidity;
         }
 
         public void setHumidity(double humidity)
         {
-            this.humidity = humidity;
+            this.Humidity = humidity;
         }
 
         public double getAmountOfWater()
         {
-            return amountOfWater;
+            return AmountOfWater;
         }
 
         public void setAmountOfWater(double amountOfWater)
         {
-            this.amountOfWater = amountOfWater;
+            this.AmountOfWater = amountOfWater;
         }
 
         public double getHoursSinceWatering()
         {
-            return hoursSinceWatering;
+            return HoursSinceWatering;
         }
 
         public void setHoursSinceWatering(double hoursSinceWatering)
         {
-            this.hoursSinceWatering = hoursSinceWatering;
+            this.HoursSinceWatering = hoursSinceWatering;
         }
 
 
