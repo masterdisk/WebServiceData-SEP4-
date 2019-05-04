@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\WebServiceData",
-    "\\WebServiceData\\Controllers"
+    "\\WebServiceData\\Controllers",
+    "\\WebServiceData\\Models"
   ],
-  "SelectedNode": "\\WebServiceData\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": true
 }

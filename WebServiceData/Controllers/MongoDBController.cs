@@ -13,12 +13,12 @@ namespace WebServiceData.Controllers
     {
         // GET: api/<controller>
         [HttpGet]
-        [Route("GetAllAccountcs")]
+        [Route("GetAllPlants")]
         public async Task<JsonResult> Get()
         {
             var monogDbService = new MongoDBMain("Project", "PlantProfiles", @"mongodb+srv://Llamaxy:865feeBA@test-i10mg.mongodb.net/test?retryWrites=true");
-            var allAccounts = await monogDbService.GetAllAccountcs();
-            return Json(allAccounts);   
+            var allPlantsProfiles = await monogDbService.GetAllPlantsProfiles();
+            return Json(allPlantsProfiles);   
         }
 
         // POST api/<controller>

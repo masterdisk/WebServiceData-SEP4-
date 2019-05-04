@@ -10,25 +10,25 @@ namespace WebServiceData.Controllers
 {
     public class MongoDBMain  
     {
-        private IMongoCollection<PlantProfile> AccountcsCollection { get; }
+        private IMongoCollection<PlantProfile> PlantsCollection { get; }
         
         public MongoDBMain(string databaseName, string collectionName, string databaseUrl)
         {
             var mongoClient = new MongoClient(databaseUrl);
 
             var mongoDatabase = mongoClient.GetDatabase(databaseName);
-            AccountcsCollection = mongoDatabase.GetCollection<PlantProfile>(collectionName);
+            PlantsCollection = mongoDatabase.GetCollection<PlantProfile>(collectionName);
         }
 
-        public async Task InsertAccount(PlantProfile acc) => await AccountcsCollection.InsertOneAsync(acc);
+        public async Task InsertAccount(PlantProfile pl) => await PlantsCollection.InsertOneAsync(pl);
 
-        public async Task <List<PlantProfile>> GetAllAccountcs()
+        public async Task <List<PlantProfile>> GetAllPlantsProfiles()
         {
-            var account = new List<PlantProfile>();
+            var plants = new List<PlantProfile>();
 
-            var allAccountcs = await AccountcsCollection.FindAsync(new BsonDocument());
-            await allAccountcs.ForEachAsync(accounts => account.Add(accounts));
-            return account;
+            var allPlants = await PlantsCollection.FindAsync(new BsonDocument());
+            await allPlants.ForEachAsync(plant => plants.Add(plant));
+            return plants;
         }
     }
 }
